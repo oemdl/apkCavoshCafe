@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.Login">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="48dp"
+        android:background="@drawable/sh_bg_header_gunmetal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Let's get you signed in!"
+            android:textColor="@color/flesh"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-28dp"
+        android:layout_marginHorizontal="20dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnSignIn"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sh_bg_btn_carmine_pink"
+                android:text="Sign In"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:translationZ="2dp"/>
+
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-32dp"
+                android:background="@drawable/sh_bg_btn_chinese_white"
+                android:text="Register"
+                android:textAllCaps="false"
+                android:textColor="@color/police_blue"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/sh_bg_btn_chinese_white"
+            android:padding="12dp"
+            android:hint="Email"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/edtPasswordd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/sh_bg_btn_chinese_white"
+            android:padding="12dp"
+            android:hint="Password"
+            android:inputType="textPassword" />
+
+        <TextView
+            android:id="@+id/tvForgotPasswordd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="end"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="Forgot password?"
+            android:textColor="@color/carmine_pink"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/sh_bg_btn_gunmetal"
+            android:text="Login"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="120dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:background="@color/carmine_pink" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingHorizontal="20dp"
+                android:text="Or login with"
+                android:textColor="@color/gunmetal"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+
+            <View
+                android:layout_width="120dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:background="@color/carmine_pink" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/ibFacebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sh_bg_btn_flesh"
+                android:contentDescription="@string/content_description"
+                android:paddingVertical="12dp"
+                android:paddingHorizontal="32dp"
+                android:src="@drawable/ic_facebook" />
+
+            <ImageButton
+                android:id="@+id/ibGoogle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/sh_bg_btn_flesh"
+                android:contentDescription="@string/content_description"
+                android:paddingVertical="12dp"
+                android:paddingHorizontal="32dp"
+                android:src="@drawable/ic_google_plus" />
+
+            <ImageButton
+                android:id="@+id/ibApple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sh_bg_btn_flesh"
+                android:contentDescription="@string/content_description"
+                android:paddingVertical="12dp"
+                android:paddingHorizontal="32dp"
+                android:src="@drawable/ic_apple" />
+
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal" >
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alredy have an account?  "
+                android:textColor="@color/gunmetal"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvRegisterNow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="Register now"
+                android:textColor="@color/carmine_pink"
+                android:textStyle="bold"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
