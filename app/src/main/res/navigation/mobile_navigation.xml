@@ -57,22 +57,37 @@
         <action
             android:id="@+id/action_navigation_inicio_to_navigation_perfil"
             app:destination="@id/navigation_perfil" />
+        <action
+            android:id="@+id/action_navigation_inicio_to_navigation_ver_producto"
+            app:destination="@id/navigation_ver_producto" />
     </fragment>
     <fragment
         android:id="@+id/navigation_menu"
         android:name="oaemdl.es.apkcavoshcafe.ui.Menu"
         android:label="fragment_menu"
-        tools:layout="@layout/fragment_menu" />
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_navigation_menu_to_navigation_ver_producto"
+            app:destination="@id/navigation_ver_producto" />
+    </fragment>
     <fragment
         android:id="@+id/navigation_favoritos"
         android:name="oaemdl.es.apkcavoshcafe.ui.Favoritos"
         android:label="fragment_favoritos"
-        tools:layout="@layout/fragment_favoritos" />
+        tools:layout="@layout/fragment_favoritos" >
+        <action
+            android:id="@+id/action_navigation_favoritos_to_navigation_ver_producto"
+            app:destination="@id/navigation_ver_producto" />
+    </fragment>
     <fragment
         android:id="@+id/navigation_carrito"
         android:name="oaemdl.es.apkcavoshcafe.ui.Carrito"
         android:label="fragment_carrito"
-        tools:layout="@layout/fragment_carrito" />
+        tools:layout="@layout/fragment_carrito" >
+        <action
+            android:id="@+id/action_navigation_carrito_to_navigation_ver_producto"
+            app:destination="@id/navigation_ver_producto" />
+    </fragment>
     <fragment
         android:id="@+id/navigation_perfil"
         android:name="oaemdl.es.apkcavoshcafe.ui.Perfil"
@@ -83,4 +98,9 @@
         android:name="oaemdl.es.apkcavoshcafe.ui.Passwordd"
         android:label="fragment_passwordd"
         tools:layout="@layout/fragment_passwordd" />
+    <fragment
+        android:id="@+id/navigation_ver_producto"
+        android:name="oaemdl.es.apkcavoshcafe.ui.VerProducto"
+        android:label="fragment_ver_producto"
+        tools:layout="@layout/fragment_ver_producto" />
 </navigation>

@@ -14,10 +14,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import oaemdl.es.apkcavoshcafe.R;
-import oaemdl.es.apkcavoshcafe.databinding.FragmentPassworddBinding;
+import oaemdl.es.apkcavoshcafe.databinding.FragmentVerProductoBinding;
 
-public class Passwordd extends Fragment {
-    FragmentPassworddBinding binding;
+public class VerProducto extends Fragment {
+    FragmentVerProductoBinding binding;
     View view;
     Context context;
     NavController navController;
@@ -30,7 +30,7 @@ public class Passwordd extends Fragment {
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        binding = FragmentPassworddBinding.inflate(inflater, container, false);
+        binding = FragmentVerProductoBinding.inflate(inflater, container, false);
         return view = binding.getRoot();
     }
 
