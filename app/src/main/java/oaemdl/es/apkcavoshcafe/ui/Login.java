@@ -13,8 +13,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.material.snackbar.Snackbar;
+
+import oaemdl.es.apkcavoshcafe.MainActivity;
 import oaemdl.es.apkcavoshcafe.R;
+import oaemdl.es.apkcavoshcafe.controller.UsuarioController;
 import oaemdl.es.apkcavoshcafe.databinding.FragmentLoginBinding;
+import oaemdl.es.apkcavoshcafe.model.Usuario;
 
 public class Login extends Fragment {
     FragmentLoginBinding binding;
@@ -47,7 +52,26 @@ public class Login extends Fragment {
     }
 
     private void btnLogin_Click() {
+        String sCorreo = binding.edtEmail.getText().toString().trim();
+        String sPassword = binding.edtPasswordd.getText().toString().trim();
 
+        if ( sCorreo.isEmpty() || sPassword.isEmpty() ) {
+            Snackbar.make(view, "Correo y/o password inválido", Snackbar.LENGTH_LONG ).show();
+            return;
+        }
+
+        Usuario usuario = new Usuario();
+        usuario.setCorreo( sCorreo );
+        usuario.setPasswordd( sPassword );
+
+        UsuarioController controller = new UsuarioController( context );
+        controller.Login( usuario );
+        if ( usuario.isLogin() ) {
+            MainActivity.usuario = usuario;
+            navController.navigate( R.id.navigation_inicio );
+        }
+
+        Snackbar.make(view, "Correo o password inválido | usuario no registrado", Snackbar.LENGTH_LONG ).show();
     }
 
 }

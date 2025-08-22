@@ -12,8 +12,10 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import oaemdl.es.apkcavoshcafe.databinding.ActivityMainBinding;
+import oaemdl.es.apkcavoshcafe.model.Usuario;
 
 public class MainActivity extends AppCompatActivity {
+    public static Usuario usuario = null;
 
     private ActivityMainBinding binding;
 

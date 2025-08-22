@@ -1,7 +1,7 @@
 package oaemdl.es.apkcavoshcafe.model;
 
 public class Usuario {
-    int id, login;
+    int id, Login;
     String Nombres, Correo, Passwordd;
 
     public int getId() {
@@ -13,11 +13,11 @@ public class Usuario {
     }
 
     public int getLogin() {
-        return login;
+        return Login;
     }
 
     public void setLogin(int login) {
-        this.login = login;
+        this.Login = login;
     }
 
     public String getNombres() {
@@ -45,7 +45,7 @@ public class Usuario {
     }
 
     public boolean isLogin() {
-        return login == 1;
+        return Login == 1;
     }
 
 }

@@ -14,7 +14,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import oaemdl.es.apkcavoshcafe.MainActivity;
 import oaemdl.es.apkcavoshcafe.R;
+import oaemdl.es.apkcavoshcafe.controller.UsuarioController;
 import oaemdl.es.apkcavoshcafe.databinding.FragmentSplashBinding;
 
 public class Splash extends Fragment {
@@ -41,8 +43,12 @@ public class Splash extends Fragment {
         context = getContext();
         navController = Navigation.findNavController( view );
 
-        binding.btnIniciar.setOnClickListener( v -> navController.navigate( R.id.navigation_login ) );
+        UsuarioController controller = new UsuarioController( context );
+        MainActivity.usuario = controller.getUsuario();
+        if ( MainActivity.usuario.isLogin() )
+            navController.navigate( R.id.navigation_inicio );
 
+        binding.btnIniciar.setOnClickListener( v -> navController.navigate( R.id.navigation_login ) );
     }
 
 }
